@@ -22,8 +22,8 @@ export const verifyChallenge = (challenge:string, signature:string) => {
 }
 
 const HOST_SETTINGS = {
-    expectedOrigin: process.env.RENDER_EXTERNAL_URL ?? "http://localhost:5000",
-    expectedRPID: process.env.RPID ?? "localhost",
+    expectedOrigin: process.env.RENDER_EXTERNAL_URL ?? "https://passkey-mkl.onrender.com/",
+    expectedRPID: process.env.RPID ?? "passkey-mkl.onrender.com",
 };
 
 // Helper function to translate values between
