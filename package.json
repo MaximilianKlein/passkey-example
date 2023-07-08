@@ -3,16 +3,17 @@
   "version": "1.2.0",
   "description": " A basic starter for an express.js API with Typescript",
   "engines": {
-    "node": ">=16 <17"
+    "node": ">=16 <19"
   },
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cd passkeys-example && npm run build && cp -r dist/* ../public",
     "lint": "eslint --fix src test",
     "test": "jest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postinstall": "cd passkeys-example && npm install"
   },
   "keywords": [],
   "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
